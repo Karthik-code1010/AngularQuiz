@@ -1,0 +1,194 @@
+{
+    "questions" : [
+        {
+            "questionText" : "Which is an array method to generate a new array based on an conditions?",
+            "options": [
+                {
+                    "text": "filter",
+                    "correct": true
+                },
+                {
+                    "text": "map"
+                },
+                {
+                    "text": "async"
+                },
+                {
+                    "text": "enum"
+                }
+            ],
+            "explanation": "filter is a method used to conditionally create a new array"
+        },
+        {
+            "questionText" : "Which are the different Data Types supported by Typescript?",
+            "options": [
+                {
+                    "text": "Boolean var bValue: boolean = false"
+                  
+                },
+                {
+                    "text": "Number var age: number = 16"
+                },
+                {
+                    "text": "String var name: string = 'jon'"
+                },
+                {
+                    "text": "All of the above mentioned",
+                    "correct": true
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText" : "What are the types of access modifiers supported by TypeScript?",
+            "options": [
+                {
+                    "text": "Public"
+                  
+                },
+                {
+                    "text": "Private"
+                },
+                {
+                    "text": "Protected"
+                },
+                {
+                    "text": "All of these",
+                    "correct": true
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : "When was the first time TypeScript was made public?",
+            "options": [
+                {
+                    "text": "December 2012"
+                  
+                },
+                {
+                    "text": "October 2012",
+                    "correct": true
+                },
+                {
+                    "text": "October 2013"
+                },
+                {
+                    "text": "November 2013"
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : "What are the benefits of Typescript?",
+            "options": [
+                {
+                    "text": "It helps in code structuring"
+                  
+                },
+                {
+                    "text": "Use class based object oriented programming"
+                  
+                },
+                {
+                    "text": "Impose coding guidelines"
+                },
+                {
+                    "text": "All of the above",
+                    "correct": true
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : "Which object oriented terms are supported by Typescript?",
+            "options": [
+                {
+                    "text": "Modules"
+                  
+                },
+                {
+                    "text": "Classes"
+                  
+                },
+                {
+                    "text": "Interfaces"
+                },
+                {
+                    "text": "All of these",
+                    "correct": true
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : "What are the components of TypeScript?",
+            "options": [
+                {
+                    "text": "TypeScript Language"
+                  
+                },
+                {
+                    "text": "TypeScript Compiler"
+                  
+                },
+                {
+                    "text": "TypeScript Language Service"
+                },
+                {
+                    "text": "All of these",
+                    "correct": true
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : " List some features of Typescript?",
+            "options": [
+                {
+                    "text": "Typescript can be compiled to all major versions of Javascript(ES3,ES5,ES6,ES7)"
+                  
+                },
+                {
+                    "text": "Typescript can be used for cross 'browser development and is an open source project'"
+                  
+                },
+                {
+                    "text": " Typescript is a superset of JavaScript that provides typed nature to your code"
+                },
+                {
+                    "text": "All of these",
+                    "correct": true
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        },
+        {
+            "questionText" : " What are variables in Typescript?",
+            "options": [
+                {
+                    "text": "What are variables in Typescript?"
+                  
+                },
+                {
+                    "text": " It cannot contain spaces and special characters except underscore (_) and dollar ($) sign"
+                  
+                },
+                {
+                    "text": " A variable name cannot begin with a digit"
+                },
+                {
+                    "text": "All ",
+                    "correct": true
+                    
+                }
+            ],
+            "explanation": "No explanation"
+        }
+    ]
+}

@@ -30,5 +30,18 @@ jobs:
     - run: npm run build --if-present
     - name: Test
       run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-    - name: E2E Test in Cypress
-      run: npm run e2e
+   
+   cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox

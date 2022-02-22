@@ -2,7 +2,7 @@
 
 FROM node:12-alpine as node-angular-cli
 
-LABEL authors="Preston Lamb"
+LABEL authors="Karthik"
 
 # Linux setup
 # I got this from another, deprecated Angular CLI image.

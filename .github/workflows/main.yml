@@ -52,4 +52,8 @@ jobs:
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
 
+<<<<<<< HEAD
    
+=======
+   
+>>>>>>> 66abf6c3d3a400fc89b29bed6b4a6b860769afb9

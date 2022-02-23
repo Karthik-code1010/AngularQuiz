@@ -1,19 +1,20 @@
-# ./Dockerfile
+### STAGE 1: Build ###
+FROM node:12.3.1-alpine as builder
 
-FROM node:12-alpine as node-angular-cli
+WORKDIR /usr/src/app
 
-LABEL authors="Karthik"
+COPY . .
 
-# Linux setup
-# I got this from another, deprecated Angular CLI image.
-# I trust that developer, so I continued to use this, but you
-# can leave it out if you want.
-RUN apk update \
-  && apk add --update alpine-sdk \
-  && apk del alpine-sdk \
-  && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
-  && npm cache verify \
-  && sed -i -e "s/bin\/ash/bin\/sh/" /etc/passwd
+RUN npm i @angular/cli --no-progress --loglevel=error
+RUN npm i --only=production --no-progress --loglevel=error
 
-# Angular CLI
-RUN npm install -g @angular/cli@8
+RUN npm run build:app
+
+### STAGE 2: Setup ###
+FROM nginx:alpine
+
+COPY nginx/default.conf /etc/nginx/conf.d/
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 4200

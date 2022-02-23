@@ -15,9 +15,9 @@ COPY . /app
 
 RUN npm run build --prod
 # Stage 2
-FROM nginx
+#FROM nginx
 
-COPY --from=build /app/dist/out/ /usr/share/nginx/html
+#COPY --from=build /app/dist/out/ /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80
+#EXPOSE 80

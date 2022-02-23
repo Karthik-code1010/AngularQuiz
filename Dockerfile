@@ -8,7 +8,8 @@ COPY . .
 RUN npm i @angular/cli --no-progress --loglevel=error
 RUN npm i --only=production --no-progress --loglevel=error
 
-RUN npm run build:app
+#RUN npm run build:app
+RUN npm run build:prod -- --prod
 
 ### STAGE 2: Setup ###
 FROM nginx:alpine

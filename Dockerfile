@@ -4,12 +4,16 @@ FROM node:16.13.1-alpine as builder
 WORKDIR /usr/src/app
 
 COPY . .
-
+RUN sudo npm cache clean -f
+RUN sudo npm install -g n
+RUN sudo n stable
 RUN npm i @angular/cli --no-progress --loglevel=error
 RUN npm i --only=production --no-progress --loglevel=error
 
+RUN npm --verbose install
+RUN npm run build
 #RUN npm run build:app
-RUN npm run build:prod -- --prod
+#RUN npm run build:prod -- --prod
 
 ### STAGE 2: Setup ###
 FROM nginx:alpine

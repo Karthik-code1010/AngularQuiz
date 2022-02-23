@@ -13,7 +13,7 @@ RUN npm run build:app
 ### STAGE 2: Setup ###
 FROM nginx:alpine
 
-COPY nginx/default.conf /etc/nginx/conf.d/
+COPY nginx.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

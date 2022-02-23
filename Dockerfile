@@ -17,7 +17,7 @@ RUN npm run build --prod
 # Stage 2
 FROM nginx:1.17.1-alpine
 
-COPY --from=builder /app/dist/angularQuizApp/ /usr/share/nginx/html
+COPY --from=build /app 
 
 # Expose port 80
 EXPOSE 80

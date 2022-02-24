@@ -9,8 +9,6 @@ COPY . .
 #FROM node:12-alpine as node-angular-cli
 
 LABEL authors="Karthik"
-RUN sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev git zlib1g-dev -y
-
 # Linux setup
 # I got this from another, deprecated Angular CLI image.
 # I trust that developer, so I continued to use this, but you

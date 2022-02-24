@@ -51,8 +51,9 @@ jobs:
       with:
         context: ./
         file: ./Dockerfile
+        #run: docker build -t angularquizapp . 
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/angular-quiz-app:v1.0.1
+        tags: ${{ secrets.DOCKER_USERNAME }}/angular-quiz-app:latest
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}

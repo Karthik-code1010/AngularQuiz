@@ -9,7 +9,16 @@ COPY . .
 #FROM node:12-alpine as node-angular-cli
 
 LABEL authors="Karthik"
-
+RUN sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev git zlib1g-dev -y
+RUN sudo mkdir ~/build && cd ~/build
+RUN sudo git clone git://github.com/arut/nginx-rtmp-module.git
+RUN sudo wget http://nginx.org/download/nginx-1.14.2.tar.gz
+RUN sudo tar xzf nginx-1.14.2.tar.gz
+CMD cd nginx-1.14.2
+RUN sudo ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module
+RUN sudo make
+RUN sudo make install
+RUN sudo /usr/local/nginx/sbin/nginx
 # Linux setup
 # I got this from another, deprecated Angular CLI image.
 # I trust that developer, so I continued to use this, but you

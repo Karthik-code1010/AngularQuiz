@@ -10,7 +10,7 @@ on:
     tags:
       - v*
 env:
-  IMAGE_NAME: angular-quiz-app:latest
+  IMAGE_NAME: angular-quiz-app
 
 jobs:
   # Push image to GitHub Packages.

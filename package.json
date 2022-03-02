@@ -1,6 +1,10 @@
 {
-  "name": "quiz-angular",
-  "version": "0.0.0",
+  "name": "@owner/quiz-angular",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Karthik-code1010/AngularQuiz.git" 
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
